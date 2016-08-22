@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController2.swift
 //  flipController
 //
 //  Created by Yaser Almasri on 8/20/16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController2: UIViewController {
     
     let secondLabel: UILabel = {
         let label = UILabel()
-        label.text = "First Controller"
+        label.text = "Second Controller"
         label.font = UIFont.systemFontOfSize(40)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .whiteColor()
-        self.navigationItem.title = "First Controller"
-        
+        self.navigationItem.title = "Second Controller"
+
         self.view.addSubview(secondLabel)
         secondLabel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
         secondLabel.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: 70).active = true
@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         self.view.addSubview(goBtn)
         self.goBtn.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
         self.goBtn.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+        
     }
     
     func handleShowMenu() {
@@ -46,4 +47,3 @@ class ViewController: UIViewController {
     }
 
 }
-
